@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sixty_four_dp">64dp</dimen>
+    <dimen name="forty_two_dp">42dp</dimen>
+    <dimen name="twenty_four_dp">24dp</dimen>
+    <dimen name="sixteen_dp">16dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+
+    <dimen name="twenty_nine_sp">29sp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="fourteen_sp">14sp</dimen>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="forty_eight_dp">48dp</dimen>
+</resources>
