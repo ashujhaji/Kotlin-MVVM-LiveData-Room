@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.byju.assignment.R
 import com.byju.assignment.databinding.ArticleBinding
 import com.byju.assignment.model.Article
+import com.byju.assignment.utils.Config
 
 class NewsHeadlinesAdapter(
     private val context: Context,
@@ -35,6 +36,9 @@ class NewsHeadlinesAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(context: Context, article: Article) {
             binding.article = article
+
+            Config.urlToImageView(binding.imageView,article.urlToImage,context)
+            binding.publishedAt.text = article.publishedAt.substring(0,10)
         }
     }
 }

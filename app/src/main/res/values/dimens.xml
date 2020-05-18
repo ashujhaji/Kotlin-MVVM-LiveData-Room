@@ -13,4 +13,5 @@
     <dimen name="forty_eight_dp">48dp</dimen>
     <dimen name="ten_dp">10dp</dimen>
     <dimen name="eight_dp">8dp</dimen>
+    <dimen name="two_hundred_dp">200dp</dimen>
 </resources>

@@ -19,6 +19,7 @@ class NewsHeadlinesActivity : AppCompatActivity(), NewsHeadlinesView,
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_headlines)
 
+        refreshLayout.isRefreshing = true
         myViewModel.getTopHeadlines(this)
         myViewModel.topHeadlines.observe(this, Observer {
             showArticles(it)
@@ -34,6 +35,6 @@ class NewsHeadlinesActivity : AppCompatActivity(), NewsHeadlinesView,
     }
 
     override fun onRefresh() {
-
+        myViewModel.getTopHeadlines(this)
     }
 }
