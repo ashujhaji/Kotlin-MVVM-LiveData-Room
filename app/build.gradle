@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.byju.assignment"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -55,6 +55,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
     //room orm libraries
     implementation 'androidx.room:room-runtime:2.2.5'
     kapt 'androidx.room:room-compiler:2.2.5'
