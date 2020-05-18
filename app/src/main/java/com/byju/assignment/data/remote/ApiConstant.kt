@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 object ApiConstant {
 
     //endpoints
-    const val TOP_HEADLINES = "/top-headlines"
+    const val TOP_HEADLINES = "top-headlines"
 
     val context = Dispatchers.IO + CoroutineExceptionHandler { _, t ->
         t.printStackTrace()
