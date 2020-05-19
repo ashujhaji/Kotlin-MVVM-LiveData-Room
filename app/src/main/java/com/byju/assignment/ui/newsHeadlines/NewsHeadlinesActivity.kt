@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.byju.assignment.R
+import com.byju.assignment.data.local.AppDataBase
 import com.byju.assignment.model.Article
 import kotlinx.android.synthetic.main.activity_news_headlines.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -13,7 +14,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class NewsHeadlinesActivity : AppCompatActivity(), NewsHeadlinesView,
     SwipeRefreshLayout.OnRefreshListener {
 
-    val myViewModel: NewsHeadlinesViewModel by viewModel()
+    private val myViewModel: NewsHeadlinesViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,8 @@ class NewsHeadlinesActivity : AppCompatActivity(), NewsHeadlinesView,
 
         refreshLayout.isRefreshing = true
         myViewModel.getTopHeadlines(this)
-        myViewModel.topHeadlines.observe(this, Observer {
+
+        AppDataBase.getAppDatabase(this).roomDao().loadArticles().observe(this, Observer {
             showArticles(it)
         })
 
