@@ -1,6 +1,7 @@
 package com.byju.assignment.ui.newsHeadlines
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.byju.assignment.R
 import com.byju.assignment.databinding.ArticleBinding
 import com.byju.assignment.model.Article
+import com.byju.assignment.ui.fullStory.FullStoryActivity
 import com.byju.assignment.utils.Config
 
 class NewsHeadlinesAdapter(
@@ -39,6 +41,11 @@ class NewsHeadlinesAdapter(
 
             Config.urlToImageView(binding.imageView,article.urlToImage,context)
             binding.publishedAt.text = article.publishedAt.substring(0,10)
+            binding.root.setOnClickListener {
+                val intent = Intent(context,FullStoryActivity::class.java)
+                intent.putExtra("pos",adapterPosition)
+                context.startActivity(intent)
+            }
         }
     }
 }
