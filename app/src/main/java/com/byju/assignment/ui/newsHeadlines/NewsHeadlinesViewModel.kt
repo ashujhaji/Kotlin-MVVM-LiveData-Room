@@ -15,8 +15,6 @@ import kotlinx.coroutines.launch
 
 class NewsHeadlinesViewModel : ViewModel() {
 
-    val topHeadlines = MutableLiveData<List<Article>>()
-
     fun getTopHeadlines(context: Context) {
         GlobalScope.launch(Dispatchers.IO) {
             try {
