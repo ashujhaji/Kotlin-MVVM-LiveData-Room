@@ -4,7 +4,7 @@
     <data class="FullStoryBinding">
         <variable
             name="article"
-            type="com.byju.assignment.model.Article" />
+            type="com.pixerapps.assignment.model.Article" />
     </data>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

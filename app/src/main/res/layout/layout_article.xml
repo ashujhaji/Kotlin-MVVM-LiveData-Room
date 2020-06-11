@@ -5,7 +5,7 @@
 
         <variable
             name="article"
-            type="com.byju.assignment.model.Article" />
+            type="com.pixerapps.assignment.model.Article" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
